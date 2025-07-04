@@ -27,8 +27,10 @@ const Hero = () => {
 
   return (
     <section ref={root} className="pt-32 pb-16 bg-white min-h-[80vh] flex flex-col items-center justify-center relative overflow-hidden" id="hero">
+      {/* Neon blue glow background */}
+      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[40vh] bg-blue-400/30 blur-3xl rounded-full pointer-events-none z-0 animate-pulse" />
       {/* Subtle grid background */}
-      <div className="absolute inset-0 pointer-events-none bg-[url('data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect x=\'0.5\' y=\'0.5\' width=\'39\' height=\'39\' rx=\'3.5\' fill=\'white\'/%3E%3Crect x=\'0.5\' y=\'0.5\' width=\'39\' height=\'39\' rx=\'3.5\' stroke=\'%23E5E7EB\'/%3E%3C/svg%3E')] bg-repeat opacity-60" />
+      <div className="absolute inset-0 pointer-events-none bg-[url('data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect x=\'0.5\' y=\'0.5\' width=\'39\' height=\'39\' rx=\'3.5\' fill=\'white\'/%3E%3Crect x=\'0.5\' y=\'0.5\' width=\'39\' height=\'39\' rx=\'3.5\' stroke=\'%23E5E7EB\'/%3E%3C/svg%3E')] bg-repeat opacity-60 z-0" />
       <div className="relative z-10 max-w-2xl mx-auto px-4 text-center">
         <div className="flex justify-center mb-6">
           <span className="hero-pill px-4 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold shadow-sm">LLM-Native Incident Memory Layer</span>
