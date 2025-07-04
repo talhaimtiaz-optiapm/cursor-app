@@ -7,6 +7,7 @@ import AlertExample from "./components/AlertExample";
 import BuiltFor from "./components/BuiltFor";
 import Testimonials from "./components/Testimonials";
 import Integrations from "./components/Integrations";
+import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <BuiltFor />
         <Testimonials />
         <Integrations />
+        <ContactForm />
       </main>
       <Footer />
     </div>
