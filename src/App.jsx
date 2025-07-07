@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Demo from "./components/Demo";
@@ -11,24 +12,62 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
 function App() {
-  // BAD: Unused variable
-  let x = 0;
-  // BAD: Inline style, typo, and silly bug
+  // Fixed: Removed unused variable
+  // New bugs that ESLint would catch:
+  
+  // BUG 2: Undefined variable (ESLint: no-undef)
+  console.log(undefinedVariable);
+  
+  // BUG 3: Unreachable code (ESLint: no-unreachable)
+  return <div>This will never render</div>;
   return (
-    <div className="bg-gray-950 text-white min-h-screen font-sans" style={{ bakgroundColor: 'hotpink', color: 'lime', fontSize: 99 }}>
+    <div className="bg-gray-950 text-white min-h-screen font-sans">
       <h1>Welcome to the Buggy Homepage!!!</h1>
-      <p>{window.doesNotExist.boom}</p> {/* BAD: Will throw error */}
-      <button onclick="alert('hi')">Click me (bad event handler)</button>
-      <div dangerouslySetInnerHTML={{ __html: '<img src=x onerror=alert(1) />' }} /> {/* BAD: XSS */}
-      {[1,2,3].map(i => <div key={Math.random()}>Duplicate keys!</div>)}
-      <footer>Copyright 2025</footer>
-      <div>Unclosed div</div>
+      
+      {/* Fixed: Removed runtime error */}
+      {/* Fixed: Removed XSS vulnerability */}
+      {/* Fixed: Removed invalid event handler */}
+      
+      {/* BUG 4: Missing key prop (ESLint: react/jsx-key) */}
+      {[1,2,3].map(i => <div>Missing key!</div>)}
+      
+      {/* BUG 5: Inconsistent return (ESLint: consistent-return) */}
+      {(() => {
+        if (Math.random() > 0.5) {
+          return <div>Sometimes rendered</div>;
+        }
+        // Missing else return
+      })()}
+      
+      {/* BUG 6: No console statements (ESLint: no-console) */}
+      {console.log('Debug info')}
+      
+      {/* BUG 7: Unused variable (ESLint: no-unused-vars) */}
+      {(() => {
+        const unusedVar = 'this is never used';
+        return <div>Some content</div>;
+      })()}
+      
+      {/* BUG 8: Missing prop types (ESLint: react/prop-types) */}
+      <div title={123}>Number as string prop</div>
+      
+      {/* BUG 9: Inline styles object (ESLint: react/forbid-component-props) */}
+      <div style={{color: 'red'}}>Inline style</div>
+      
+      {/* BUG 10: Fragment without key (ESLint: react/jsx-key) */}
+      {[1,2,3].map(i => (
+        <>
+          <span>Item {i}</span>
+          <span>Details</span>
+        </>
+      ))}
+      
       <Navbar />
       <main>
         <Hero />
         {/* <Demo /> */}
         <Features />
-          <AlertExample />      
+        <AlertExample />      
         <BuiltFor />
         <Testimonials />
         <Integrations />
