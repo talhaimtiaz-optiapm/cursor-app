@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -34,7 +34,7 @@ const Integrations = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h2 className="integrations-title text-2xl md:text-3xl font-extrabold mb-8 text-gray-900">Integrates Seamlessly</h2>
         <div className="flex flex-wrap justify-center gap-12 items-center">
-          {integrations.map((i, idx) => (
+          {integrations.map((i) => (
             <div
               key={i.name}
               className="integration-card flex flex-col items-center bg-white rounded-xl px-6 py-4 shadow border border-gray-200"

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -36,7 +36,7 @@ const Features = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4">
         <h2 className="features-title text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-900">Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((f, i) => (
+          {features.map((f) => (
             <div key={f.title} className="feature-card bg-white rounded-2xl p-8 flex flex-col items-center shadow border border-gray-200 hover:shadow-md transition-shadow duration-200">
               <div className="feature-icon mb-4">
                 <i className={`lucide lucide-${f.icon.toLowerCase()} text-3xl text-blue-500`}></i>

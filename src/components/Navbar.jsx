@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Navbar = () => (
   <nav className="fixed top-0 left-0 w-full z-50 bg-white/95 shadow-sm border-b border-gray-100">
