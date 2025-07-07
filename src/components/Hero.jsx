@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -41,7 +41,7 @@ const Hero = () => {
         <p className="hero-subtitle text-lg text-gray-600 mb-8">RobinRelay remembers every alert and fix your team discussed in Slack — so no one wastes time solving the same problem twice.</p>
         <div className="flex flex-col md:flex-row gap-4 justify-center mb-10">
           <a href="#early-access" className="hero-btn px-7 py-3 rounded-lg font-semibold bg-blue-600 text-white shadow hover:bg-blue-700 transition-colors">Request Early Access</a>
-          <a href="#" className="hero-btn px-7 py-3 rounded-lg font-semibold border border-gray-300 text-gray-800 hover:bg-gray-100 transition-colors">Book a Call</a>
+          <a href="#contact" className="hero-btn px-7 py-3 rounded-lg font-semibold border border-gray-300 text-gray-800 hover:bg-gray-100 transition-colors">Book a Call</a>
         </div>
         {/* Screenshot */}
         <div className="flex justify-center">

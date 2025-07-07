@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -49,7 +49,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-4">
         <h2 className="testimonials-title text-2xl md:text-3xl font-extrabold text-center mb-12 text-gray-900">What Teams Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
+          {testimonials.map((t) => (
             <div key={t.name} className="testimonial-card bg-white rounded-2xl p-8 flex flex-col items-center shadow border border-gray-200">
               <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full mb-3 border border-blue-200" />
               <p className="text-gray-800 text-center mb-3">“{t.text}”</p>
