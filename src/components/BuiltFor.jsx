@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -35,7 +35,7 @@ const BuiltFor = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h2 className="builtfor-title text-2xl md:text-3xl font-extrabold mb-8 text-gray-900">Built for Modern Engineering Teams</h2>
         <div className="flex flex-wrap justify-center gap-8">
-          {roles.map((r, i) => (
+          {roles.map((r) => (
             <div key={r.label} className="builtfor-card flex flex-col items-center bg-white rounded-xl px-6 py-4 shadow border border-gray-200">
               <i className={`lucide lucide-${r.icon.toLowerCase()} text-3xl text-blue-500 mb-2`}></i>
               <span className="font-semibold text-gray-900">{r.label}</span>

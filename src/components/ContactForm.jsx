@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -44,7 +44,7 @@ const ContactForm = () => {
     setIsSubmitted(true);
     
     // Reset form after 3 seconds
-    setTimeout(() => {
+    window.setTimeout(() => {
       setIsSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
     }, 3000);

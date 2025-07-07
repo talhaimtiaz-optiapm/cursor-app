@@ -13,12 +13,12 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="bg-gray-950 text-white min-h-screen font-sans">
+      
       <Navbar />
       <main>
         <Hero />
-        {/* <Demo /> */}
         <Features />
-        <AlertExample />
+        <AlertExample />      
         <BuiltFor />
         <Testimonials />
         <Integrations />
