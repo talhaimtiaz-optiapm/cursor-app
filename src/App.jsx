@@ -19,7 +19,6 @@ function App() {
   console.log(undefinedVariable);
   
   // BUG 3: Unreachable code (ESLint: no-unreachable)
-  return <div>This will never render</div>;
   return (
     <div className="bg-gray-950 text-white min-h-screen font-sans">
       <h1>Welcome to the Buggy Homepage!!!</h1>
